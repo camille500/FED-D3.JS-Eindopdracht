@@ -1,0 +1,18 @@
+$line_strokeColor: #dcdcdc;
+$path_strokeColor: #bbb;
+$fill: none;
+
+.container {
+  padding: 3em 0em;
+
+  svg {
+    line {
+      stroke: $line_strokeColor;
+      shape-rendering: crispEdges;
+    }
+    path.domain {
+      display: none;
+      stroke: $path_strokeColor;
+    }
+  }
+}

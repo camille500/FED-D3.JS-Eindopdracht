@@ -1,0 +1,15 @@
+.container {
+  padding: 3em 0em;
+}
+line {
+  shape-rendering: crispEdges;
+  stroke: #dcdcdc;
+}
+path.domain {
+  fill: none;
+  stroke: #bbb;
+}
+
+svg {
+  border:1px lightgray solid;
+}
