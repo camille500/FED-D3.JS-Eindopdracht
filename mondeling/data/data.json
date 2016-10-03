@@ -37,13 +37,13 @@
   {
     "datum": "09/10/16",
     "sigaretten": 26,
-    "bier": 16,
+    "bier": 13,
     "sterk": 0,
     "wijn": 5
   },
   {
     "datum": "09/11/16",
-    "sigaretten": 4,
+    "sigaretten": 14,
     "bier": 0,
     "sterk": 0,
     "wijn": 0
@@ -128,7 +128,7 @@
   {
     "datum": "09/23/16",
     "sigaretten": 22,
-    "bier": 17,
+    "bier": 14,
     "sterk": 0,
     "wijn": 2
   },

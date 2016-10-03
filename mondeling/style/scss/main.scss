@@ -3,7 +3,8 @@ $path_strokeColor: #bbb;
 $fill: none;
 
 .container {
-  padding: 3em 0em;
+  padding: 5em 0em;
+  margin-left: 3em;
 
   svg {
     line {
@@ -15,4 +16,50 @@ $fill: none;
       stroke: $path_strokeColor;
     }
   }
+}
+
+div.controls {
+    width: 37em;
+    padding: 2em;
+    position: absolute;
+    top: 5em;
+    right: 4em;
+    background-color: #f1f1f1;
+
+    .btn-state {
+      margin-top: 1em;
+    }
+  }
+
+div.overzicht {
+  width: 37em;
+  padding: 2em;
+  position: absolute;
+  top: 18em;
+  right: 4em;
+  background-color: #f1f1f1;
+  text-align: center;
+}
+
+div#sigaretten {
+    background-color: #2c3e50;
+}
+
+div#bier {
+  background-color: rgb(231, 76, 60);
+}
+
+div#wijn {
+  background-color: rgb(52, 152, 219);
+}
+
+div#sterk {
+  background-color: rgb(22, 160, 133);
+}
+
+.legenda {
+  display: inline-block;
+  text-align: center;
+  color: white;
+  padding: .5em .8em;
 }

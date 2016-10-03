@@ -19,17 +19,9 @@
 
     <div class="container" id="viz">
 
-      <svg style="width:1100px;height:750px;" />
+          <svg style="width:1100px;height:750px;" />
 
-      <div class="row">
-        <div class="col-md-3">
-          <h4>Zoeken tussen 2 data</h4>
-          <input type="text" id="demo" class="form-control">
-        </div>
-      </div>
-
-
-</div>
+    </div>
 
       <!-- <input class="btn btn-default" id="week" value="Week" />
       <input class="btn btn-default" onclick="getData()" value="Alles" /> -->
@@ -38,8 +30,28 @@
 
     </div>
 
-    <div class="container" id="controls">
+    <div class="controls" id="controls">
 
+      <h4>Zoeken tussen 2 data</h4>
+      <input type="text" id="datepicker" class="form-control">
+
+      <a class="btn btn-default btn-state soortLine" id="linear">Linear</a>
+      <a class="btn btn-default btn-state" id="step">Stappen</a>
+      <a class="btn btn-default btn-state" id="cardinal">Cardinal</a>
+
+
+    </div>
+
+    <div class="overzicht" id="controls">
+
+      <h4 class="text-center"><span id="pie-date">Klik op een datapunt voor details</span> </h4>
+      <!-- <input type="text" id="date picker" class="form-control"> -->
+      <svg id="piechart" height="400" width="460"></svg>
+
+      <div class="legenda" id="sigaretten">Sigaretten</div>
+      <div class="legenda" id="bier">Bier</div>
+      <div class="legenda" id="wijn">Wijn</div>
+      <div class="legenda" id="sterk">Sterk</div>
 
     </div>
 
@@ -50,6 +62,7 @@
     <script type="text/javascript" src="http://cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js"></script>
     <script src="js/mondeling2.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/test.js"></script>
 
   </body>
 
