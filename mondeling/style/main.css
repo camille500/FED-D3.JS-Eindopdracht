@@ -1,48 +1,217 @@
-.container {
-  padding: 5em 0em;
-  margin-left: 3em; }
-  .container svg line {
-    stroke: #dcdcdc;
-    shape-rendering: crispEdges; }
-  .container svg path.domain {
-    display: none;
-    stroke: #bbb; }
+body {
+    background: url("../images/bg2.svg") no-repeat;
+}
 
-div.controls {
-  width: 37em;
-  padding: 2em;
-  position: absolute;
-  top: 5em;
-  right: 4em;
-  background-color: #f1f1f1; }
-  div.controls .btn-state {
-    margin-top: 1em; }
+.container {
+    padding: 2em 0em;
+    margin-left: 2em;
+}
+
+#line-svg {
+    margin-left: 0em;
+}
+
+#piechart {
+    position: absolute;
+    right: 4em;
+    top: 21em;
+}
+
+#barchart-svg {
+    margin-top: 0em;
+    margin-left: 0em;
+    z-index: -5;
+}
+
+.container svg line {
+    stroke: rgba(237, 237, 238, 0.21);
+    shape-rendering: crispEdges;
+}
+
+.container svg path.domain {
+    display: none;
+    stroke: none;
+}
+
+.container svg text {
+    fill: white;
+}
+
+#viz2 svg text {
+    fill: white
+}
+
+.head-linechart {
+    color: white;
+}
+
+#viz2 svg line {
+    stroke: rgba(237, 237, 238, 0.21);
+    shape-rendering: crispEdges;
+}
+
+.container-fluid.buttons {
+    padding: 2em 0em 2em 3.4em;
+    background-color: rgba(0, 0, 0, 0.37);
+}
+
+.margin-top-1 {
+    margin-top: 1em;
+}
 
 div.overzicht {
-  width: 37em;
-  padding: 2em;
-  position: absolute;
-  top: 18em;
-  right: 4em;
-  background-color: #f1f1f1;
-  text-align: center; }
+    width: 30em;
+    height: 47.75em;
+    /*display: none;*/
+    padding: 2em;
+    background-color: rgba(255, 255, 255, 0.10);
+    position: absolute;
+    top: 6.68em;
+    right: 0;
+    text-align: center;
+}
+
+div.overzicht2 {
+    width: 30em;
+    padding: 2em;
+    position: absolute;
+    top: 60.9em;
+    right: 0;
+    height: 50em;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.10);
+}
 
 div#sigaretten {
-  background-color: #2c3e50; }
+    background-color: #2c3e50;
+}
 
 div#bier {
-  background-color: #e74c3c; }
+    background-color: #e74c3c;
+}
 
 div#wijn {
-  background-color: #3498db; }
+    background-color: #3498db;
+}
 
 div#sterk {
-  background-color: #16a085; }
+    background-color: #16a085;
+}
 
 .legenda {
-  display: inline-block;
-  text-align: center;
-  color: white;
-  padding: .5em .8em; }
+    display: inline-block;
+    text-align: center;
+    color: white;
+    padding: .5em .8em;
+}
+
+.slaap-btn-active {
+    background-color: #fbb1be;
+    color: black;
+    border: white 2px solid;
+    font-weight: 500;
+}
+
+.sigaretten-btn-active {
+    background-color: #f6f5a6;
+    color: black;
+    border: white 2px solid;
+    font-weight: 500;
+}
+
+.alcohol-btn-active {
+    background-color: #5be4f7;
+    color: black;
+    border: white 2px solid;
+    font-weight: 500;
+}
+
+path.domain {
+    fill: none;
+    stroke: black;
+}
+
+.daterange {
+    display: inline;
+    width: 13.5em;
+    margin-left: 2.5em;
+    margin-right: 2.5em;
+    z-index: 10000;
+}
+
+.barchart-control {
+    margin-top: -3em;
+}
+
+#viz2 {
+    margin-top: 0em;
+}
+
+.icon-holder {
+    height: 8em;
+    background-color: rgb(29, 64, 66);
+}
+
+.detail-icon {
+    width: 50%;
+    margin-top: 1.4em;
+}
+
+.detail-icon.sigaret {
+    margin-top: 2.7em;
+}
+
+.waarde-houder {
+    height: 8em;
+    background-color: rgba(255, 255, 255, 1);
+    padding-top: 2em;
+}
+
+.waarde {
+    font-size: 3em;
+}
+
+.tile-row {
+    margin-bottom: .75em;
+}
+
+.tour-highlight {
+    border: 3px #337ab7 solid;
+    background-color: white!important;
+}
+
+#pointer-circle {
+    width: 10px;
+    height: 10px;
+    z-index: 10000;
+    position: absolute;
+    left: 25.9em;
+    top: 31em;
+}
+
+.legenda2 {
+    background-color: #23234c;
+    color: white;
+    padding: .5em;
+    position: absolute;
+    left: 2.5em;
+}
+
+.legenda1 {
+    background-color: #ce2645;
+    color: white;
+    padding: .5em;
+    position: absolute;
+    left: 10.5em;
+}
+
+h2 {
+    font-size: 1.5em;
+    display: inline-block;
+    margin: 0;
+    margin-right: 2em;
+    color: white;
+}
+
 
 /*# sourceMappingURL=main.css.map */

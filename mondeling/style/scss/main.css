@@ -1,0 +1,52 @@
+.container {
+  padding: 5em 0em;
+  margin-left: 3em; }
+  .container svg line {
+    stroke: #dcdcdc;
+    shape-rendering: crispEdges; }
+  .container svg path.domain {
+    display: none;
+    stroke: #bbb; }
+
+div.controls {
+  width: 32em;
+  padding: 2em;
+  position: absolute;
+  top: 5em;
+  right: 4em;
+  background-color: #f1f1f1; }
+  div.controls .btn-state {
+    margin-top: 1em; }
+
+div.overzicht {
+  width: 32em;
+  padding: 2em;
+  position: absolute;
+  top: 18em;
+  right: 4em;
+  background-color: #f1f1f1;
+  text-align: center; }
+
+div#sigaretten {
+  background-color: #2c3e50; }
+
+div#bier {
+  background-color: #e74c3c; }
+
+div#wijn {
+  background-color: #3498db; }
+
+div#sterk {
+  background-color: #16a085; }
+
+.legenda {
+  display: inline-block;
+  text-align: center;
+  color: white;
+  padding: .5em .8em; }
+
+  path.domain {
+      fill: none;
+      stroke: black;
+  }
+/*# sourceMappingURL=main.css.map */

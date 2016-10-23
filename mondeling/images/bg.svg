@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1440px" height="1800px" viewBox="0 0 1440 1800" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 40.1 (33804) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 2</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="62.5789642%" y1="128.564236%" x2="39.6229638%" y2="-8.52256944%" id="linearGradient-1">
+            <stop stop-color="#5A44B9" offset="0%"></stop>
+            <stop stop-color="#DE437D" offset="100%"></stop>
+        </linearGradient>
+        <radialGradient cx="50%" cy="0%" fx="50%" fy="0%" r="100%" id="radialGradient-2">
+            <stop stop-color="#FFFFFF" stop-opacity="0.5" offset="0%"></stop>
+            <stop stop-color="#000000" stop-opacity="0.5" offset="100%"></stop>
+        </radialGradient>
+        <linearGradient x1="100%" y1="50%" x2="1.03037309%" y2="50%" id="linearGradient-3">
+            <stop stop-color="#FFFFFF" stop-opacity="0.500764266" offset="0%"></stop>
+            <stop stop-color="#D33B65" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="68.5952716%" y1="79.2777778%" x2="53.1906764%" y2="44.5603299%" id="linearGradient-4">
+            <stop stop-color="#146FC3" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0.500764266" offset="100%"></stop>
+        </linearGradient>
+        <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="81.9904514%" id="radialGradient-5">
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="0%"></stop>
+            <stop stop-color="#150528" stop-opacity="0.119791667" offset="100%"></stop>
+        </radialGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-2">
+            <g id="background">
+                <g id="YourData-DASHBOARD">
+                    <g id="dashboard">
+                        <g id="Group">
+                            <g id="background">
+                                <g id="main_background">
+                                    <g id="path-6-link" fill="url(#linearGradient-1)">
+                                        <rect id="path-6" x="0" y="0" width="1440" height="900"></rect>
+                                    </g>
+                                    <g id="path-6-link" fill="url(#radialGradient-2)">
+                                        <rect id="path-6" x="0" y="0" width="1440" height="900"></rect>
+                                    </g>
+                                    <g id="path-6-link" style="mix-blend-mode: multiply;" fill="url(#linearGradient-3)">
+                                        <rect id="path-6" x="0" y="0" width="1440" height="900"></rect>
+                                    </g>
+                                    <g id="path-6-link" style="mix-blend-mode: multiply;" fill="url(#linearGradient-4)">
+                                        <rect id="path-6" x="0" y="0" width="1440" height="900"></rect>
+                                    </g>
+                                    <g id="path-6-link" style="mix-blend-mode: multiply;" fill="url(#radialGradient-5)">
+                                        <rect id="path-6" x="0" y="0" width="1440" height="900"></rect>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+            <g id="background-copy" transform="translate(720.000000, 1350.000000) scale(-1, 1) rotate(-180.000000) translate(-720.000000, -1350.000000) translate(0.000000, 900.000000)">
+                <g id="YourData-DASHBOARD">
+                    <g id="dashboard">
+                        <g id="Group">
+                            <g id="background">
+                                <g id="main_background">
+                                    <g id="path-6-link" fill="url(#linearGradient-1)">
+                                        <rect id="path-6" x="0" y="0" width="1440" height="900"></rect>
+                                    </g>
+                                    <g id="path-6-link" fill="url(#radialGradient-2)">
+                                        <rect id="path-6" x="0" y="0" width="1440" height="900"></rect>
+                                    </g>
+                                    <g id="path-6-link" style="mix-blend-mode: multiply;" fill="url(#linearGradient-3)">
+                                        <rect id="path-6" x="0" y="0" width="1440" height="900"></rect>
+                                    </g>
+                                    <g id="path-6-link" style="mix-blend-mode: multiply;" fill="url(#linearGradient-4)">
+                                        <rect id="path-6" x="0" y="0" width="1440" height="900"></rect>
+                                    </g>
+                                    <g id="path-6-link" style="mix-blend-mode: multiply;" fill="url(#radialGradient-5)">
+                                        <rect id="path-6" x="0" y="0" width="1440" height="900"></rect>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

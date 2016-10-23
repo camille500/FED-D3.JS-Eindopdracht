@@ -1,0 +1,108 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.container#viz, .container#viz2 {
+    padding: 2em 0em;
+    margin-left: 37%;
+}
+
+.container svg line {
+    stroke: rgba(208, 208, 210, 0.52);
+    shape-rendering: crispEdges;
+}
+
+.container svg path.domain {
+    display: none;
+    stroke: none;
+}
+
+.container svg text {
+    fill: black;
+}
+
+#viz2 svg text {
+    fill: black
+}
+
+.head-linechart {
+    color: black;
+}
+
+#viz2 svg line {
+    stroke: rgba(87, 87, 88, 0.65);
+    shape-rendering: crispEdges;
+}
+
+.container.buttons {
+    padding: 3em 0em 0em 2em;
+}
+
+div.controls {
+    width: 26em;
+    position: absolute;
+    top: 7em;
+    right: 4em;
+}
+
+.margin-top-1 {
+    margin-top: 1em;
+}
+
+div.overzicht {
+    width: 26em;
+    padding: 2em;
+    position: absolute;
+    top: 20em;
+    right: 4em;
+    text-align: center;
+}
+
+div#sigaretten {
+    background-color: #2c3e50;
+}
+
+div#bier {
+    background-color: #e74c3c;
+}
+
+div#wijn {
+    background-color: #3498db;
+}
+
+div#sterk {
+    background-color: #16a085;
+}
+
+.legenda {
+    display: inline-block;
+    text-align: center;
+    color: white;
+    padding: .5em .8em;
+}
+
+.slaap-btn-active {
+    background-color: #e74c3c;
+    color: black;
+    border: none;
+}
+
+.sigaretten-btn-active {
+    background-color: #F6F5A6;
+    color: black;
+    border: none;
+}
+
+.alcohol-btn-active {
+    background-color: #5be4f7;
+    color: black;
+    border: none;
+}
+
+path.domain {
+    fill: none;
+    stroke: black;
+}
+
+
+/*# sourceMappingURL=main.css.map */

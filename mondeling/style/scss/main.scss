@@ -1,9 +1,13 @@
-$line_strokeColor: #dcdcdc;
+$line_strokeColor: hsla(240, 3%, 93%, 0.21);
 $path_strokeColor: #bbb;
 $fill: none;
 
+body {
+  background: url('../images/background.svg') no-repeat;
+}
+
 .container {
-  padding: 5em 0em;
+  padding: 2em 0em;
   margin-left: 3em;
 
   svg {
@@ -13,16 +17,23 @@ $fill: none;
     }
     path.domain {
       display: none;
-      stroke: $path_strokeColor;
+      stroke: $fill;
+    }
+    text {
+      fill: white;
     }
   }
 }
 
+.container.buttons {
+  padding: 3em 0em 0em 2em;
+}
+
 div.controls {
-    width: 37em;
+    width: 26em;
     padding: 2em;
     position: absolute;
-    top: 5em;
+    top: 7em;
     right: 4em;
     background-color: #f1f1f1;
 
@@ -32,10 +43,10 @@ div.controls {
   }
 
 div.overzicht {
-  width: 37em;
+  width: 26em;
   padding: 2em;
   position: absolute;
-  top: 18em;
+  top: 20em;
   right: 4em;
   background-color: #f1f1f1;
   text-align: center;
@@ -63,3 +74,26 @@ div#sterk {
   color: white;
   padding: .5em .8em;
 }
+
+@mixin active-btn($color) {
+  background-color: $color;
+  color: black;
+  border: none;
+}
+
+.slaap-btn-active {
+ @include active-btn(rgb(231, 76, 60));
+}
+
+.sigaretten-btn-active {
+ @include active-btn(#F6F5A6);
+}
+
+.alcohol-btn-active {
+ @include active-btn(rgb(91, 228, 247));
+}
+
+path.domain {
+    fill: none;
+    stroke: black;
+} 

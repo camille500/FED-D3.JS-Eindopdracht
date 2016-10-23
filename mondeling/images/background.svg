@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1440px" height="900px" viewBox="0 0 1440 900" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 40.1 (33804) - http://www.bohemiancoding.com/sketch -->
+    <title>main_background</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="82.2021484%" y1="128.564236%" x2="23.4347873%" y2="-8.52256944%" id="linearGradient-1">
+            <stop stop-color="#5A44B9" offset="0%"></stop>
+            <stop stop-color="#DE437D" offset="100%"></stop>
+        </linearGradient>
+        <radialGradient cx="50%" cy="0%" fx="50%" fy="0%" r="100%" id="radialGradient-2">
+            <stop stop-color="#FFFFFF" stop-opacity="0.5" offset="0%"></stop>
+            <stop stop-color="#000000" stop-opacity="0.5" offset="100%"></stop>
+        </radialGradient>
+        <linearGradient x1="100%" y1="50%" x2="1.03037309%" y2="50%" id="linearGradient-3">
+            <stop stop-color="#FFFFFF" stop-opacity="0.500764266" offset="0%"></stop>
+            <stop stop-color="#D33B65" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="97.6038954%" y1="79.2777778%" x2="58.1681315%" y2="44.5603299%" id="linearGradient-4">
+            <stop stop-color="#146FC3" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0.500764266" offset="100%"></stop>
+        </linearGradient>
+        <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="81.9904514%" id="radialGradient-5">
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="0%"></stop>
+            <stop stop-color="#150528" stop-opacity="0.119791667" offset="100%"></stop>
+        </radialGradient>
+        <rect id="path-6" x="101" y="29" width="1440" height="900"></rect>
+    </defs>
+    <g id="YourData-DASHBOARD" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="dashboard">
+            <g transform="translate(-101.000000, -29.000000)">
+                <g id="background">
+                    <g id="main_background">
+                        <use fill="url(#linearGradient-1)" xlink:href="#path-6"></use>
+                        <use fill-opacity="0.0500000045" fill="url(#radialGradient-2)" xlink:href="#path-6"></use>
+                        <use fill-opacity="0.5" fill="url(#linearGradient-3)" style="mix-blend-mode: multiply;" xlink:href="#path-6"></use>
+                        <use fill-opacity="0.100000001" fill="url(#linearGradient-4)" style="mix-blend-mode: multiply;" xlink:href="#path-6"></use>
+                        <use fill="url(#radialGradient-5)" style="mix-blend-mode: multiply;" xlink:href="#path-6"></use>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

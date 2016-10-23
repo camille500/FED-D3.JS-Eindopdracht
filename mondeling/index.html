@@ -1,6 +1,16 @@
+<!-- Bronnen & gebruikte frameworks:
+  - https://getbootstrap.com/ - Bootstrap framework
+  - https://jquery.com/ - jQuery Library
+  - https://easelinc.github.io/tourist/ - Framework voor de guided tour
+  - http://backbonejs.org/ - Key value binding framework
+  - http://momentjs.com/ - Parsing date's
+  - http://www.daterangepicker.com/ - Bootstrap's daterangepicker
+  - https://thenounproject.com/ - Gebruikte icons -->
+
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,61 +19,136 @@
 
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
     <link href="style/main.css" rel="stylesheet" />
+    <link href="style/tourist.css" rel="stylesheet" />
     <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css" />
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="http://backbonejs.org/backbone.js"></script>
 
-  </head>
+</head>
 
-  <body>
+<body>
+
+    <div class="container-fluid buttons" id="buttons">
+
+        <h2>Alcohol & sigaretten consumptie</h2>
+
+        <a class="btn btn-default sigaretten-btn-active" id="sigaretten-btn" alt="#F6F5A6">Aantal sigaretten</a>
+        <a class="btn btn-default alcohol-btn-active" id="alcohol-btn" alt="#5BE4F7">Eenheden alcohol</a>
+        <a class="btn btn-default slaap-btn" id="slaap-btn" alt='none'>Uren slaap</a>
+        <input type="text" id="datepicker1" class="form-control daterange">
+        <a class="btn btn-default btn-state" id="linear">Linear</a>
+        <a class="btn btn-default btn-state" id="step">Stappen</a>
+        <a class="btn btn-default btn-state soortLine" id="cardinal">Cardinal</a>
+
+    </div>
 
     <div class="container" id="viz">
 
-          <svg style="width:1100px;height:750px;" />
+        <svg id="line-svg" />
+        <span id="pointer-circle"></span>
 
     </div>
 
-      <!-- <input class="btn btn-default" id="week" value="Week" />
-      <input class="btn btn-default" onclick="getData()" value="Alles" /> -->
-      <!-- <input class="btn btn-default" id="step" alt="step" value="Stappen" />
-      <input class="btn btn-default" id="normal" alt=" " id="week" value="Cardinal" /> -->
+    <div class="overzicht" id="overzicht">
+        <div class="row tile-row">
+
+            <div class="col-md-5 col-md-offset-1 icon-holder">
+                <img src="images/icons/steps-icon.svg" alt="Aantal stappen" class="detail-icon" />
+            </div>
+            <div class="col-md-5 waarde-houder">
+                <span class="waarde" id="stappen"></span>
+            </div>
+
+            <svg id="piechart" height="300" width="310"></svg>
+        </div>
+
+        <div class="row tile-row">
+
+            <div class="col-md-5 col-md-offset-1 icon-holder">
+                <img src="images/icons/humeur/7.svg" id="humeur-icon" alt="Aantal stappen" class="detail-icon" />
+            </div>
+            <div class="col-md-5 waarde-houder">
+                <span class="waarde" id="humeur"></span>
+            </div>
+
+            <!-- <svg id="piechart" height="300" width="310"></svg> -->
+
+        </div>
+    </div>
+
+    <div class="container-fluid buttons barchart-control" id="buttons">
+
+        <h2>Afgelegde kilometers</h2>
+
+        <input type="text" id="datepicker2" class="form-control daterange">
 
     </div>
 
-    <div class="controls" id="controls">
+    <div class="container" id="viz2">
 
-      <h4>Zoeken tussen 2 data</h4>
-      <input type="text" id="datepicker" class="form-control">
+        <div class="legenda1">KM Gelopen</div>
+        <div class="legenda2">KM met OV</div>
 
-      <a class="btn btn-default btn-state soortLine" id="linear">Linear</a>
-      <a class="btn btn-default btn-state" id="step">Stappen</a>
-      <a class="btn btn-default btn-state" id="cardinal">Cardinal</a>
-
+        <svg id="barchart-svg" />
 
     </div>
 
-    <div class="overzicht" id="controls">
+    <div class="overzicht2" id="overzicht2">
+        <div class="row tile-row">
 
-      <h4 class="text-center"><span id="pie-date">Klik op een datapunt voor details</span> </h4>
-      <!-- <input type="text" id="date picker" class="form-control"> -->
-      <svg id="piechart" height="400" width="460"></svg>
+            <div class="col-md-5 col-md-offset-1 icon-holder">
+                <img src="images/icons/steps-icon.svg" alt="Aantal stappen" class="detail-icon" />
+            </div>
+            <div class="col-md-5 waarde-houder">
+                <span class="waarde" id="stappen2"></span>
+            </div>
 
-      <div class="legenda" id="sigaretten">Sigaretten</div>
-      <div class="legenda" id="bier">Bier</div>
-      <div class="legenda" id="wijn">Wijn</div>
-      <div class="legenda" id="sterk">Sterk</div>
+            <svg id="piechart" height="300" width="310"></svg>
+        </div>
+
+        <div class="row tile-row">
+
+            <div class="col-md-5 col-md-offset-1 icon-holder">
+                <img src="images/icons/alcohol-icon.svg" alt="Aantal glazen alcohol" class="detail-icon" />
+            </div>
+            <div class="col-md-5 waarde-houder">
+                <span class="waarde" id="alcohol"></span>
+            </div>
+
+        </div>
+        <div class="row tile-row">
+            <div class="col-md-5 col-md-offset-1 icon-holder">
+                <img src="images/icons/sigaret-icon.svg" alt="Aantal sigaretten" class="detail-icon sigaret" />
+            </div>
+            <div class="col-md-5 waarde-houder">
+                <span class="waarde" id="sigaretten"></span>
+            </div>
+        </div>
+
+        <div class="row tile-row">
+            <div class="col-md-5 col-md-offset-1 icon-holder">
+                <img src="images/icons/humeur/7.svg" id="humeur-icon2" alt="Aantal stappen" class="detail-icon" />
+            </div>
+            <div class="col-md-5 waarde-houder">
+                <span class="waarde" id="humeur2"></span>
+            </div>
+        </div>
 
     </div>
+
 
 
     <script src="../../d3.min.js"></script>
-    <script src="../js/bootstrap.min.js"></script>
     <script type="text/javascript" src="http://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
     <script type="text/javascript" src="http://cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js"></script>
-    <script src="js/mondeling2.js"></script>
+    <script src="js/tourist.js"></script>
+    <script src="js/linechart.js"></script>
     <script src="js/script.js"></script>
-    <script src="js/test.js"></script>
+    <script src="js/stackchart.js"></script>
 
-  </body>
+</body>
 
 </html>
