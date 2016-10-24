@@ -95,9 +95,9 @@ function drawChart(error, data) {
             .selectAll("text")
             .attr('x', -22);
 
-        var sigarettenColor = d3.select('#sigaretten-btn').attr('alt');
-        var alcoholColor = d3.select('#alcohol-btn').attr('alt');
-        var slaapColor = d3.select('#slaap-btn').attr('alt');
+        var sigarettenColor = d3.select('#sigaretten-btn-F6F5A6').attr('alt');
+        var alcoholColor = d3.select('#alcohol-btn-5BE4F7').attr('alt');
+        var slaapColor = d3.select('#slaap-btn-FBB1BE').attr('alt');
 
         var sigarettenPoints = d3.select('svg').selectAll("circle.sigaretten").data(filterData);
         var alcoholPoints = d3.select('svg').selectAll("circle.alcohol").data(filterData);
@@ -189,6 +189,7 @@ function drawChart(error, data) {
                 tooltip.transition()
                     .style('opacity', 0);
             });
+
 
         // Bron: D3.JS in Action - Manning Publications Co.
         var sigarettenLine = d3.svg.line()
@@ -285,7 +286,7 @@ function drawChart(error, data) {
         slaapPath.attr("d", slaapLine(filterData)) // Needs an X & Y value to draw the lines
             .attr('class', 'slaap')
             .attr("fill", "none")
-            .attr("stroke", "none")
+            .attr("stroke", slaapColor)
             .attr("stroke-width", 2)
             .on('mouseover', function(d) {
                 d3.select(this).style('stroke', slaapColor);
@@ -310,7 +311,7 @@ function drawChart(error, data) {
 
     // Extra informatie laten zien als er op een datapunt wordt geklikt
     d3.selectAll('circle').on('click', function(d) {
-        console.log(d);
+        // console.log(d);
         d3.select('#overzicht').style('display', 'block');
         d3.select('#stappen').text(d.stappen);
         d3.select('#humeur-icon').attr('src', 'images/icons/humeur/' + Math.floor(d.humeur) + '.svg');
@@ -389,49 +390,27 @@ function drawChart(error, data) {
         updateChart(data);
     });
 
-    // Laat lijnen wel of niet zien op basis van button click
-    d3.select('#slaap-btn').on('click', function() {
-        if (d3.selectAll('path.slaap').style('stroke') != 'none') {
-            d3.selectAll('path.slaap').style('stroke', 'none');
-            d3.selectAll('circle.slaap').style('fill', 'none');
-            d3.select('#slaap-btn').attr('alt', 'none').attr('class', 'btn btn-default');
-            updateChart(data);
-        } else {
-            d3.selectAll('path.slaap').style('stroke', '#FBB1BE');
-            d3.selectAll('circle.slaap').style('fill', '#FBB1BE');
-            d3.select('#slaap-btn').attr('alt', '#FBB1BE').attr('class', 'btn btn-default slaap-btn-active');
-            updateChart(data);
-        };
-    });
 
-    // Laat lijnen wel of niet zien op basis van button click
-    d3.select('#sigaretten-btn').on('click', function() {
-        if (d3.selectAll('path.sigaretten').style('stroke') != 'none') {
-            d3.selectAll('path.sigaretten').style('stroke', 'none');
-            d3.selectAll('circle.sigaretten').style('fill', 'none');
-            d3.select('#sigaretten-btn').attr('alt', 'none').attr('class', 'btn btn-default');
-            updateChart(data);
-        } else {
-            d3.selectAll('path.sigaretten').style('stroke', '#F6F5A6');
-            d3.selectAll('circle.sigaretten').style('fill', '#F6F5A6');
-            d3.select('#sigaretten-btn').attr('alt', '#F6F5A6').attr('class', 'btn btn-default sigaretten-btn-active');
-            updateChart(data);
-        };
-    });
+    d3.selectAll('.line-btn').on('click', function() {
+        var id = '#' + d3.select(this).attr('id');
+        var color = '#' + id.substring(id.length - 6);
+        var soort = id.substring(1, id.length - 11);
+        var buttonClass = 'btn btn-default line-btn ' + soort + '-btn-active';
+        var circle = 'circle.' + soort;
+        var path = 'path.' + soort;
 
-    // Laat lijnen wel of niet zien op basis van button click
-    d3.select('#alcohol-btn').on('click', function() {
-        if (d3.selectAll('circle.alcohol').style('fill') != 'none') {
-            d3.selectAll('circle.alcohol').style('fill', 'none');
-            d3.selectAll('path.alcohol').style('stroke', 'none');
-            d3.select('#alcohol-btn').attr('alt', 'none').attr('class', 'btn btn-default');
+        if (d3.selectAll(circle).style('fill') != 'none') {
+            d3.selectAll(circle).style('fill', 'none');
+            d3.selectAll(path).style('stroke', 'none');
+            d3.select(id).attr('alt', 'none').attr('class', 'btn btn-default line-btn');
             updateChart(data);
         } else {
-            d3.selectAll('circle.alcohol').style('fill', '#5BE4F7');
-            d3.selectAll('path.alcohol').style('stroke', '#5BE4F7');
-            d3.select('#alcohol-btn').attr('alt', '#5BE4F7').attr('class', 'btn btn-default alcohol-btn-active');
+            d3.selectAll(circle).style('fill', color);
+            d3.selectAll(path).style('stroke', color);
+            d3.select(id).attr('alt', color).attr('class', buttonClass);
             updateChart(data);
         };
+
     });
 
     // Verander de interpolatie van de lijnen op basis van buttonclick

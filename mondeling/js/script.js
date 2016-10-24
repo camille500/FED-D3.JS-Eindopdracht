@@ -26,7 +26,7 @@ var steps = [{
     content: '<p>Kies welke waarden moeten worden getoond in de grafiek</p>',
     highlightTarget: true,
     nextButton: true,
-    target: $('#alcohol-btn'),
+    target: $('#alcohol-btn-5BE4F7'),
     my: 'top center',
     at: 'bottom center'
 }, {
